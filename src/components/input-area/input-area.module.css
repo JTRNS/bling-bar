@@ -1,0 +1,32 @@
+.grow {
+  display: grid;
+}
+.grow::after {
+  content: attr(data-grow) ' ';
+  white-space: pre-wrap;
+  visibility: hidden;
+}
+.grow > textarea {
+  resize: none;
+  overflow: hidden;
+  background-color: var(--surface-1);
+}
+.grow > textarea,
+.grow::after {
+  border: 1px solid var(--surface-4);
+  outline-color: var(--secondary);
+  padding: 0.5rem 0.5rem 1rem;
+  color: var(--text-1);
+  font: inherit;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.count {
+  color: var(--text-dimm);
+  grid-area: 1 / 1 / 2 / 2;
+  justify-self: start;
+  align-self: end;
+  font-weight: lighter;
+  font-size: 11px;
+  padding: 4px 0 2px 0.5rem;
+}

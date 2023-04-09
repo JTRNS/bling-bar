@@ -1,0 +1,51 @@
+.pickable {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.unpicked {
+  padding: 4px;
+  color: var(--text-2);
+  background-color: var(--surface-3);
+  border: 2px solid var(--surface-4);
+  border-radius: 4px;
+  transition: border-color 200ms ease;
+}
+.picked {
+  composes: unpicked;
+  color: var(--text-1);
+  border-color: var(--secondary);
+  background-color: var(--surface-2);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+/* .input {
+  border: 2px solid var(--surface-4);
+  flex: 0 2 auto;
+  padding: 1px 4px;
+  width: min-content;
+  text-align: center;
+}
+
+.input:focus {
+  background-color: var(--surface-2);
+}
+
+.input:not(:focus) {
+  border-color: var(--surface-4);
+  border-radius: 4px;
+  background-color: var(--surface-2);
+}
+
+.input:focus::placeholder {
+  visibility: hidden;
+}
+
+.inputPicked {
+  composes: input;
+  border-color: orange;
+}
+
+.inputPicked:not(:focus) {
+  border-color: orange;
+} */

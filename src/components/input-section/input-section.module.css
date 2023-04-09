@@ -1,0 +1,43 @@
+.section {
+  padding: 4px 8px 8px;
+  background-color: var(--surface-1);
+  border: 1px solid var(--surface-4);
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 24px 1fr;
+  grid-template-areas:
+    'icon title'
+    'opts opts';
+  gap: 8px 4px;
+}
+
+.section:hover,
+.section:focus-within {
+  border-color: transparent;
+  outline: 2px solid var(--secondary);
+}
+
+.icon {
+  min-width: 20px;
+  grid-area: icon;
+  justify-self: start;
+  align-self: center;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  grid-area: title;
+  margin: 0;
+  line-height: 22px;
+}
+
+.options {
+  grid-area: opts;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
